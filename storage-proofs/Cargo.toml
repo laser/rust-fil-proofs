@@ -11,7 +11,8 @@ logging-toolkit = { path = "../logging-toolkit" }
 bitvec = "0.5"
 rand = "0.4"
 libc = "0.2"
-merkle_light = { git = "https://github.com/filecoin-project/merkle_light", branch = "master" }
+# FIXME: Point to development branch.
+merkle_light = { git = "https://github.com/filecoin-project/merkle_light", branch = "feat/disk-mmap" }
 failure = "0.1"
 byteorder = "1"
 crossbeam-utils = "0.6"
@@ -54,6 +55,7 @@ branch = "master"
 default = []
 simd = ["blake2/simd_opt"]
 asm = ["sha2/sha2-asm", "blake2/simd_asm"]
+disk-trees = []
 
 [dev-dependencies]
 proptest = "0.7"
