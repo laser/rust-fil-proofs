@@ -14,7 +14,10 @@ type Config = HashMap<String, String>;
 
 const DEFAULT_CONFIG: &[(&str, &str)] = &[
     ("MAXIMIZE_CACHING", "false"),
-    ("MERKLE_TREE_PATH", "/tmp/merkle-trees"),
+    // Directory where we will store replicated MTs backed by `mmap` with
+    // file-mapping (`crate::merkle::DiskMmapStore`). An empty string signals
+    // to create temporary files (which will be erased after execution).
+    ("REPLICATED_TREES_DIR", ""),
 ];
 
 lazy_static! {
