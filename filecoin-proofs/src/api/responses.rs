@@ -68,6 +68,7 @@ pub struct GeneratePoStResponse {
     pub faults_ptr: *const u64,
     pub flattened_proofs_len: libc::size_t,
     pub flattened_proofs_ptr: *const u8,
+    pub single_proof_len: libc::size_t,
 }
 
 impl Default for GeneratePoStResponse {
@@ -79,6 +80,7 @@ impl Default for GeneratePoStResponse {
             faults_ptr: ptr::null(),
             flattened_proofs_len: 0,
             flattened_proofs_ptr: ptr::null(),
+            single_proof_len: 0,
         }
     }
 }

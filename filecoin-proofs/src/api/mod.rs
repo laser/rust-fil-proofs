@@ -114,6 +114,7 @@ pub unsafe extern "C" fn generate_post(
 
             response.flattened_proofs_len = flattened_proofs.len();
             response.flattened_proofs_ptr = flattened_proofs.as_ptr();
+            response.single_proof_len = proofs.first().map(Vec::len).unwrap_or(0);
 
             response.faults_len = faults.len();
             response.faults_ptr = faults.as_ptr();
