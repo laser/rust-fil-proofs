@@ -38,6 +38,7 @@ blake2b_simd = "0.4.1"
 phase21 = "0.3"
 bellperson = "0.2"
 paired = "0.15"
+reqwest = "0.9.16"
 
 [dependencies.sapling-crypto]
 git = "https://github.com/filecoin-project/sapling-crypto"
